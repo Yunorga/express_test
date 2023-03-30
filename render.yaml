@@ -1,0 +1,12 @@
+build:
+  steps:
+    - name: Install dependencies
+      command: npm install
+    - name: Build application
+      command: npm run build
+  cacheDirectories:
+    - node_modules
+  env:
+    - NODE_ENV=production
+
+startCommand: node index.js
